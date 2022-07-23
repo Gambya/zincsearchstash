@@ -1,4 +1,4 @@
-# Zinc Search Stash
+# <img src=https://github.com/Gambya/zincsearchstash/blob/main/logo.png> Zinc Search Stash
 
 Serviço para consumo de fila em rabbitmq para inserir dados no [ZincSearch](https://docs.zincsearch.com/).
 
