@@ -1,0 +1,27 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ZINCSEARCHSTASH",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd",
+            "env": {
+                "ZINC_EXCHANGE_NAME": "",
+                "ZINC_ROUTING_KEY": "",
+                "ZINC_QUEUE": "",
+                "ZINC_BROKER_URL": "",
+                "ZINC_URL": "",
+                "ZINC_INDEX": "",
+                "ZINC_USER": "",
+                "ZINC_PASS": "",
+                "ZINC_LOG_LEVEL": "-1",
+                "ZINC_VERSION": ""
+            }
+        }
+    ]
+}

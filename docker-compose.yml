@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  zincsearchstash:
+    image: gambya/zincsearchstash:0.0.1-alpine
+    environment:
+      - ZINC_EXCHANGE_NAME=exchangename
+      - ZINC_ROUTING_KEY=routingkey
+      - ZINC_QUEUE=queuename
+      - ZINC_BROKER_URL=amqp://user:password@host:port/
+      - ZINC_URL=http://host_zincsearch/api/%s/_doc
+      - ZINC_INDEX=index
+      - ZINC_USER=user
+      - ZINC_PASS=password
+      - ZINC_LOG_LEVEL=-1
+      - ZINC_VERSION=0.0.1
+    networks:
+      - zincnetwork
+    restart: unless-stopped
+
+  zincsearch:
+    image: public.ecr.aws/h9e2j3o7/zinc:latest
+    ports:
+      - "4080:4080"
+    environment:
+      - ZINC_FIRST_ADMIN_USER=user
+      - ZINC_FIRST_ADMIN_PASSWORD=pass
+      - ZINC_DATA_PATH=/data
+    volumes:
+    - ./tmp:/data
+    networks:
+      - zincnetwork
+    restart: unless-stopped
+
+networks:
+  zincnetwork:
