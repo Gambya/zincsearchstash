@@ -41,14 +41,17 @@ func (p *RMQClient) RecordListening(ctx context.Context, handler RecordHandler) 
 		var data interface{}
 		err = json.Unmarshal(msg.Body, &data)
 		if err != nil {
+			log.Error().Err(err)
 			return nil
 		}
+
 		err = handler(data)
 		// If the handler throws any error, we will not make ack of the message
 		// and the message will came again. The handler must process this message
 		// right to get it off the queue. If the problem is a poison message, then the
 		// handler must handle it and get it of the queue
 		if err != nil {
+			log.Error().Err(err)
 			// TODO: Log message here!
 		}
 
@@ -58,10 +61,13 @@ func (p *RMQClient) RecordListening(ctx context.Context, handler RecordHandler) 
 	err = func() (err error) {
 		con, err := p.Dialer.Connection(ctx)
 		if err != nil {
+			log.Error().Err(err)
 			return
 		}
+
 		ch, err := con.Channel()
 		if err != nil {
+			log.Error().Err(err)
 			return
 		}
 		defer ch.Close()
@@ -75,6 +81,7 @@ func (p *RMQClient) RecordListening(ctx context.Context, handler RecordHandler) 
 			false, // nowait
 			nil)
 		if err != nil {
+			log.Error().Err(err)
 			return
 		}
 
@@ -94,6 +101,7 @@ func (p *RMQClient) RecordListening(ctx context.Context, handler RecordHandler) 
 
 		return
 	}()
+
 	if err != nil {
 		log.Error().Err(err).Msg("error on connect to rabbitmq")
 		return
@@ -104,6 +112,7 @@ func (p *RMQClient) RecordListening(ctx context.Context, handler RecordHandler) 
 	options = append(options, consumer.WithQueue(p.cfg.QueueName))
 	c, err := p.Dialer.Consumer(options...)
 	if err != nil {
+		log.Error().Err(err)
 		return
 	}
 	defer c.Close()
