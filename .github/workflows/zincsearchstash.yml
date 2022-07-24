@@ -65,7 +65,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: gambya/zincsearchstash
           tags: |
               type=ref,event=branch
               type=ref,event=pr
