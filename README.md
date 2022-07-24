@@ -1,4 +1,6 @@
-# <img src=https://github.com/Gambya/zincsearchstash/blob/main/logo.png> Zinc Search Stash      [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=Gambya_zincsearchstash)
+# Zinc Search Stash
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=Gambya_zincsearchstash)
 
 Serviço para consumo de fila em rabbitmq para inserir dados no [ZincSearch](https://docs.zincsearch.com/).
 
