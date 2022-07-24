@@ -20,7 +20,7 @@ func main() {
 
 	rmq := broker.NewRMQClient(cfg, cfg.BrokerUrl)
 
-	zincSearch := zincsearch.NewZincSearch(fmt.Sprintf(cfg.ZincSearchUrl, cfg.ZincIndex), cfg.ZincUser, cfg.ZincPass)
+	zincSearch := zincsearch.NewZincSearch(fmt.Sprintf("%s/api/%s/_doc", cfg.ZincSearchUrl, cfg.ZincIndex), cfg.ZincUser, cfg.ZincPass)
 
 	recordService := services.NewRecordService(zincSearch)
 

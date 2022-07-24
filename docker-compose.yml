@@ -8,7 +8,7 @@ services:
       - ZINC_ROUTING_KEY=routingkey
       - ZINC_QUEUE=queuename
       - ZINC_BROKER_URL=amqp://user:password@host:port/
-      - ZINC_URL=http://host_zincsearch/api/%s/_doc
+      - ZINC_URL=http://host_zincsearch
       - ZINC_INDEX=index
       - ZINC_USER=user
       - ZINC_PASS=password
