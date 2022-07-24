@@ -1,0 +1,33 @@
+{"Time":"2022-07-24T15:19:58.472484-03:00","Action":"output","Package":"zincsearchstash/tests/mock","Output":"testing: warning: no tests to run\n"}
+{"Time":"2022-07-24T15:19:58.472722-03:00","Action":"output","Package":"zincsearchstash/tests/mock","Output":"PASS\n"}
+{"Time":"2022-07-24T15:19:58.472728-03:00","Action":"output","Package":"zincsearchstash/tests/mock","Output":"ok  \tzincsearchstash/tests/mock\t(cached) [no tests to run]\n"}
+{"Time":"2022-07-24T15:19:58.472739-03:00","Action":"pass","Package":"zincsearchstash/tests/mock","Elapsed":0}
+{"Time":"2022-07-24T15:19:58.481798-03:00","Action":"output","Package":"zincsearchstash/cmd","Output":"?   \tzincsearchstash/cmd\t[no test files]\n"}
+{"Time":"2022-07-24T15:19:58.481876-03:00","Action":"skip","Package":"zincsearchstash/cmd","Elapsed":0}
+{"Time":"2022-07-24T15:19:58.481893-03:00","Action":"output","Package":"zincsearchstash/internal/broker","Output":"?   \tzincsearchstash/internal/broker\t[no test files]\n"}
+{"Time":"2022-07-24T15:19:58.481918-03:00","Action":"skip","Package":"zincsearchstash/internal/broker","Elapsed":0}
+{"Time":"2022-07-24T15:19:59.410059-03:00","Action":"run","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecord"}
+{"Time":"2022-07-24T15:19:59.410166-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecord","Output":"=== RUN   TestDataInsertRecord\n"}
+{"Time":"2022-07-24T15:19:59.410181-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecord","Output":"{\"level\":\"trace\",\"time\":\"2022-07-24T15:19:59-03:00\",\"message\":\"starting data insert\"}\n"}
+{"Time":"2022-07-24T15:19:59.410201-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecord","Output":"--- PASS: TestDataInsertRecord (0.00s)\n"}
+{"Time":"2022-07-24T15:19:59.410206-03:00","Action":"pass","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecord","Elapsed":0}
+{"Time":"2022-07-24T15:19:59.410213-03:00","Action":"run","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError"}
+{"Time":"2022-07-24T15:19:59.410223-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"=== RUN   TestDataInsertRecordError\n"}
+{"Time":"2022-07-24T15:19:59.410227-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"{\"level\":\"trace\",\"time\":\"2022-07-24T15:19:59-03:00\",\"message\":\"starting data insert\"}\n"}
+{"Time":"2022-07-24T15:19:59.41023-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"    record_test.go:52: \n"}
+{"Time":"2022-07-24T15:19:59.410233-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"        \tError Trace:\t/Users/roberto.ramos/workspace/bleu/zincsearchstash/internal/services/record_test.go:52\n"}
+{"Time":"2022-07-24T15:19:59.410237-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"        \tError:      \tExpected nil, but got: \u0026errors.errorString{s:\"error, message arrived null\"}\n"}
+{"Time":"2022-07-24T15:19:59.41024-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"        \tTest:       \tTestDataInsertRecordError\n"}
+{"Time":"2022-07-24T15:19:59.410261-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"    controller.go:269: missing call(s) to *mock.MockZincSearchService.Insert(is anything) /Users/roberto.ramos/workspace/bleu/zincsearchstash/internal/services/record_test.go:44\n"}
+{"Time":"2022-07-24T15:19:59.410274-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"    controller.go:269: aborting test due to missing call(s)\n"}
+{"Time":"2022-07-24T15:19:59.410288-03:00","Action":"output","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Output":"--- FAIL: TestDataInsertRecordError (0.00s)\n"}
+{"Time":"2022-07-24T15:19:59.410326-03:00","Action":"fail","Package":"zincsearchstash/internal/services","Test":"TestDataInsertRecordError","Elapsed":0}
+{"Time":"2022-07-24T15:19:59.41033-03:00","Action":"output","Package":"zincsearchstash/internal/services","Output":"FAIL\n"}
+{"Time":"2022-07-24T15:19:59.411065-03:00","Action":"output","Package":"zincsearchstash/internal/services","Output":"FAIL\tzincsearchstash/internal/services\t0.557s\n"}
+{"Time":"2022-07-24T15:19:59.411079-03:00","Action":"fail","Package":"zincsearchstash/internal/services","Elapsed":0.557}
+{"Time":"2022-07-24T15:19:59.41166-03:00","Action":"output","Package":"zincsearchstash/internal/setup","Output":"?   \tzincsearchstash/internal/setup\t[no test files]\n"}
+{"Time":"2022-07-24T15:19:59.411669-03:00","Action":"skip","Package":"zincsearchstash/internal/setup","Elapsed":0}
+{"Time":"2022-07-24T15:19:59.411679-03:00","Action":"output","Package":"zincsearchstash/pkg/zincascii","Output":"?   \tzincsearchstash/pkg/zincascii\t[no test files]\n"}
+{"Time":"2022-07-24T15:19:59.411691-03:00","Action":"skip","Package":"zincsearchstash/pkg/zincascii","Elapsed":0}
+{"Time":"2022-07-24T15:19:59.411707-03:00","Action":"output","Package":"zincsearchstash/pkg/zincsearch","Output":"?   \tzincsearchstash/pkg/zincsearch\t[no test files]\n"}
+{"Time":"2022-07-24T15:19:59.41171-03:00","Action":"skip","Package":"zincsearchstash/pkg/zincsearch","Elapsed":0}

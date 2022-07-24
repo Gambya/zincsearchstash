@@ -20,5 +20,17 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    - name: Test
+    - name: Test and Report
       run: go test -v ./...
+    
+    - name: Test Report
+      run: go test -json > test-report.out ./...
+
+    - name: Coverage
+      run: go test -coverprofile=coverage.out ./...
+    
+    - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

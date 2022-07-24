@@ -1,6 +1,5 @@
-# Zinc Search Stash
+# Zinc Search Stash     [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Gambya_zincsearchstash&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Gambya_zincsearchstash)
 
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=Gambya_zincsearchstash)
 
 Serviço para consumo de fila em rabbitmq para inserir dados no [ZincSearch](https://docs.zincsearch.com/).
 
