@@ -31,5 +31,6 @@ export ZINC_INDEX=index
 export ZINC_USER=user
 export ZINC_PASS=pass
 export ZINC_LOG_LEVEL=-1
-go run cmd/main.go
+cd cmd && go build -o bin/zincsearchstash
+./bin/zincsearchstash
 ```
